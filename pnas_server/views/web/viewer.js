@@ -27,7 +27,7 @@
 
 'use strict';
 
-var DEFAULT_URL = 'web/123.pdf';
+var DEFAULT_URL = 'pdf/123.pdf';
 
 var DEFAULT_SCALE_DELTA = 1.1;
 var MIN_SCALE = 0.25;
@@ -6747,6 +6747,9 @@ var PDFViewerApplication = {
         console.warn('Warning: AcroForm/XFA is not supported');
         self.fallback(PDFJS.UNSUPPORTED_FEATURES.forms);
       }
+
+      //PNas Modify
+      pnas.setPageNum(1);
 
     });
   },

@@ -1,13 +1,12 @@
 var pnas = {
 	
 	setDefaultUrl : function(url){
-		DEFAULT_URL = 'web/' + url;
+		DEFAULT_URL = 'pdf/' + url;
 	},
 
 	setPageNum : function(pageNum){
 		document.getElementById('pageNumber').value = pageNum;
-		var event = new CustomEvent('change', {});
-		document.getElementById('pageNumber').dispatchEvent(event);
+		document.getElementById('pageNumber').dispatchEvent(new CustomEvent('change', {}));
 	}, 
 
 	setPdf : function(url){
